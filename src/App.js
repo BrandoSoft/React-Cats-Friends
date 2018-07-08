@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import CardList from './CardList';
 import { cats } from './cats';
 import SearchBox from './SearchBox';
+import './App.css';
 
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
 	}
 
 	onSearchChange = (event) => {
-		this.setState({ searchField: event.target.value });
+		this.setState({ searchField: event.target.value })
 	}
 
 	render() {
@@ -24,7 +25,7 @@ class App extends Component {
 
 		return(
 			<div className='tc'>
-				<h1> Cat Friends </h1>
+				<h1 className='f1'> Cat Friends </h1>
 				<SearchBox searchChange={this.onSearchChange} />
 				<CardList cats={filteredCats} />
 			</div>
